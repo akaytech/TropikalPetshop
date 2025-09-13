@@ -1,6 +1,109 @@
 body {
-    font-family: 'DynaPuff', Arial, sans-serif;
+        font-family: 'DynaPuff', Arial, sans-serif;
 }
 h1, h2 {
-    font-family: 'DynaPuff', Arial, sans-serif;
+        font-family: 'DynaPuff', Arial, sans-serif;
+}
+
+/* Navbar Temel Stil */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.navbar-left {
+    flex: 1;
+    text-align: left;
+}
+.navbar-center {
+    flex: 1;
+    text-align: center;
+}
+.navbar-right {
+    flex: 1;
+    text-align: right;
+}
+.navbar-link {
+    font-size: 0.95em;
+    margin-left: 18px;
+    color: #444;
+    text-decoration: none;
+}
+.logo img {
+    height: 60px;
+}
+#menu-urunler {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2a7c6f;
+    text-decoration: none;
+}
+
+/* Açılır Ürünler Menüsü Temel Stil */
+.products-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 33vw;
+    max-width: 400px;
+    height: 100vh;
+    background: #f8f8f8;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+    z-index: 1000;
+    display: none;
+    padding: 30px 20px;
+}
+.products-menu.open {
+    display: block;
+}
+.products-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.products-menu li {
+    margin-bottom: 18px;
+}
+.products-menu a {
+    font-size: 1.1em;
+    color: #2a7c6f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.products-menu a:hover {
+    color: #1e5c4f;
+}
+
+/* Alt Kategoriler Hover Menü Stil */
+.has-submenu {
+    position: relative;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.08);
+    padding: 12px 10px;
+    border-radius: 6px;
+    z-index: 1100;
+}
+.has-submenu:hover > .submenu {
+    display: block;
+}
+.submenu li {
+    margin-bottom: 10px;
+}
+.submenu a {
+    color: #2a7c6f;
+    font-size: 0.98em;
+    text-decoration: none;
+}
+.submenu a:hover {
+    color: #1e5c4f;
 }
