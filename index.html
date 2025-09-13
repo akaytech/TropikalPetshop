@@ -12,78 +12,86 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <h1>TROPİKAL AKVARYUM&PETSHOP</h1>
-            <a class="logo" href="#" aria-label="Anasayfaya dön">
-                <img src="media/yeni-logo-removebg-preview2.png" alt="Tropikal Petshop Logo">
-            </a>
-        <nav aria-label="Ana menü">
-            <ul>
-                <li class="has-dropdown">
-                    <a id="menu-urunler" href="#products" aria-haspopup="true" aria-expanded="false">Ürünler</a>
-                    <ul class="dropdown" aria-label="Ürünler menüsü">
-                        <li><a href="#kedi">Kedi </a>
-                            <ul>
-                                <li><a href="#kedi-mamalari">Kedi Mamaları</a></li>
-                                <li><a href="#kedi-kum">Kedi Kumları</a></li>
-                                <li><a href="#kedi-giysi-aksesuar">Kedi Giysi ve Aksesuarları</a></li>
-                                <li><a href="#kedi-puset">Kedi Pusetleri</a></li>
-                                <li><a href="#kedi-oyuncak">Kedi Oyuncakları</a></li>
-                                <li><a href="#kedi-tuvalet">Kedi Tuvaletleri</a></li>
-                                <li><a href="#kedi-bakim">Kedi Bakım Ürünleri</a></li>
-                                <li><a href="#kedi-ilac-takviyesi">Kedi İlaç ve Takviyeleri</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#kopek">Köpek</a>
-                            <ul>
-                                <li><a href="#kopek-mamalari">Köpek Mamaları</a></li>
-                                <li><a href="#kopek-kum">Köpek Kumları</a></li>
-                                <li><a href="#kopek-giysi-aksesuar">Köpek Giysi ve Aksesuarları</a></li>
-                                <li><a href="#kopek-puset">Köpek Pusetleri</a></li>
-                                <li><a href="#kopek-oyuncak">Köpek Oyuncakları</a></li>
-                                <li><a href="#kopek-tuvalet">Köpek Tuvaletleri</a></li>
-                                <li><a href="#kopek-bakim">Köpek Bakım Ürünleri</a></li>
-                                <li><a href="#kopek-ilac-takviyesi">Köpek İlaç ve Takviyeleri</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#balik">Balık</a>
-                            <ul>
-                                <li><a href="#balik-yem">Balık Yemleri</a></li>
-                                <li><a href="#balik-akvaryum">Balık Akvaryumları</a></li>
-                                <li><a href="#balik-aksesuar">Balık Aksesuarları</a></li>
-                                <li><a href="#balik-ilac">Balık İlaçları</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#kus">Kuş</a>
-                            <ul>
-                                <li><a href="#kus-yem">Kuş Yemleri</a></li>
-                                <li><a href="#kus-kafes">Kuş Kafesleri</a></li>
-                                <li><a href="#kus-aksesuar">Kuş Aksesuarları</a></li>
-                                <li><a href="#kus-ilac-takviyesi">Kuş İlaç ve Takviyeleri</a></li>
-                                <li><a href="#kus-bakim">Kuş Bakım Ürünleri</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#kemirgenler">Kemirgenler</a>
-                            <ul>
-                                <li><a href="#kemirgenler-yem">Kemirgenler Yemleri</a></li>
-                                <li><a href="#kemirgenler-kafes">Kemirgenler Kafesleri</a></li>
-                                <li><a href="#kemirgenler-aksesuar">Kemirgenler Aksesuarları</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#kaplumbaga">Kaplumbağa</a>
-                            <ul>
-                                <li><a href="#kaplumbaga-yem">Kaplumbağa Yemleri</a></li>
-                                <li><a href="#kaplumbaga-akvaryum">Kaplumbağa Akvaryumları</a></li>
-                                <li><a href="#kaplumbaga-aksesuar">Kaplumbağa Aksesuarları</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#about">Hakkında</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </nav>
-        </div>
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a id="menu-urunler" href="#" onclick="document.getElementById('products-menu').classList.toggle('open'); return false;">Ürünler</a>
+                </div>
+                <div class="navbar-center">
+                    <a class="logo" href="#" aria-label="Anasayfaya dön">
+                        <img src="media/yeni-logo-removebg-preview2.png" alt="Tropikal Petshop Logo">
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <a href="#about" class="navbar-link">Hakkında</a>
+                    <a href="#contact" class="navbar-link">İletişim</a>
+                </div>
+            </nav>
+            <!-- Açılır Ürünler Menüsü -->
+            <div id="products-menu" class="products-menu">
+                        <ul>
+                            <li class="has-submenu">
+                                <a href="#kedi">Kedi</a>
+                                <ul class="submenu">
+                                    <li><a href="#kedi-mamalari">Kedi Mamaları</a></li>
+                                    <li><a href="#kedi-kum">Kedi Kumları</a></li>
+                                    <li><a href="#kedi-giysi-aksesuar">Kedi Giysi ve Aksesuarları</a></li>
+                                    <li><a href="#kedi-puset">Kedi Pusetleri</a></li>
+                                    <li><a href="#kedi-oyuncak">Kedi Oyuncakları</a></li>
+                                    <li><a href="#kedi-tuvalet">Kedi Tuvaletleri</a></li>
+                                    <li><a href="#kedi-bakim">Kedi Bakım Ürünleri</a></li>
+                                    <li><a href="#kedi-ilac-takviyesi">Kedi İlaç ve Takviyeleri</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#kopek">Köpek</a>
+                                <ul class="submenu">
+                                    <li><a href="#kopek-mamalari">Köpek Mamaları</a></li>
+                                    <li><a href="#kopek-kum">Köpek Kumları</a></li>
+                                    <li><a href="#kopek-giysi-aksesuar">Köpek Giysi ve Aksesuarları</a></li>
+                                    <li><a href="#kopek-puset">Köpek Pusetleri</a></li>
+                                    <li><a href="#kopek-oyuncak">Köpek Oyuncakları</a></li>
+                                    <li><a href="#kopek-tuvalet">Köpek Tuvaletleri</a></li>
+                                    <li><a href="#kopek-bakim">Köpek Bakım Ürünleri</a></li>
+                                    <li><a href="#kopek-ilac-takviyesi">Köpek İlaç ve Takviyeleri</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#balik">Balık</a>
+                                <ul class="submenu">
+                                    <li><a href="#balik-yem">Balık Yemleri</a></li>
+                                    <li><a href="#balik-akvaryum">Balık Akvaryumları</a></li>
+                                    <li><a href="#balik-aksesuar">Balık Aksesuarları</a></li>
+                                    <li><a href="#balik-ilac">Balık İlaçları</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#kus">Kuş</a>
+                                <ul class="submenu">
+                                    <li><a href="#kus-yem">Kuş Yemleri</a></li>
+                                    <li><a href="#kus-kafes">Kuş Kafesleri</a></li>
+                                    <li><a href="#kus-aksesuar">Kuş Aksesuarları</a></li>
+                                    <li><a href="#kus-ilac-takviyesi">Kuş İlaç ve Takviyeleri</a></li>
+                                    <li><a href="#kus-bakim">Kuş Bakım Ürünleri</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#kemirgenler">Kemirgenler</a>
+                                <ul class="submenu">
+                                    <li><a href="#kemirgenler-yem">Kemirgenler Yemleri</a></li>
+                                    <li><a href="#kemirgenler-kafes">Kemirgenler Kafesleri</a></li>
+                                    <li><a href="#kemirgenler-aksesuar">Kemirgenler Aksesuarları</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#kaplumbaga">Kaplumbağa</a>
+                                <ul class="submenu">
+                                    <li><a href="#kaplumbaga-yem">Kaplumbağa Yemleri</a></li>
+                                    <li><a href="#kaplumbaga-akvaryum">Kaplumbağa Akvaryumları</a></li>
+                                    <li><a href="#kaplumbaga-aksesuar">Kaplumbağa Aksesuarları</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+            </div>
     </header>
     <main>
         <section id="products">
